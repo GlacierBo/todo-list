@@ -3,6 +3,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { useTodos } from '@/composables/useTodos'
 import type { Todo } from '@/types/todo'
 import ConfirmDialog from '@/components/ConfirmDialog.vue'
+import { supabase } from '@/utils/supabase'
 
 const { todos, loading, error, fetchTodos, createTodo, deleteTodo, toggleTodo, subscribeToTodos } = useTodos()
 
