@@ -11,5 +11,5 @@ export default defineConfig({
     }
   },
   // GitHub Pages 部署时需要设置 base
-  // base: '/todo-list/',
+  base: '/todo-list/',
 })
