@@ -20,7 +20,12 @@
       "Bash(curl *)",
       "Bash(netstat -ano)",
       "Bash(kill -9 23652 28604 17336 13860)",
-      "Bash(cmd *)"
+      "Bash(cmd *)",
+      "Bash(mkdir -p docs/image/unused)",
+      "Bash(node scripts/check-images.cjs)",
+      "Bash(npm ls *)",
+      "Bash(npm install *)",
+      "Bash(node scripts/compress-images.cjs)"
     ]
   }
 }
