@@ -1,3 +1,11 @@
+---
+tags:
+  - CoreDNS
+  - DNS
+  - 云原生
+  - 网络
+---
+
 > {docsify-updated}
 
 #### **Docker 部署 coreDNS**

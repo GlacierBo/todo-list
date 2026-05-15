@@ -6,8 +6,6 @@
 
 由 <a href="https://github.com/GlacierBo">傅皮蛋</a> 长期维护，
 
-由 [docsify](https://github.com/docsifyjs/docsify) 构建，
-
 简约的它会被 [傅皮蛋](https://github.com/GlacierBo) 和他的 <a href="/#/links">朋友们</a> 浏览使用。
 
 
@@ -15,25 +13,21 @@
 
 ### 关于我
 
-我是一名 Java 开发者，
+我是一名 Java 后端开发，PMP 认证，
 
-家有悍妻一枚，折耳猫咪"十一"一只，
+目前接触云原生相关技术栈（K8s、Rancher、CoreDNS、Envoy），
 
-工作之余会写一点东西抒发感慨。
+推动自动化流程落地（GitLab + Jenkins + Sonar + 企业微信），
 
-会一点 Python，会一点 JS。
+喜欢研究架构设计和性能优化。
 
-没有漂亮的简历和拿的出手的作品，可能有些偏执和狂热。
+职业技能：
 
-对投资感兴趣，
+Java / Spring Boot / Spring Cloud / MyBatis / Redis
 
-但是手头没有闲钱去实操。
+Docker / K8s / Rancher / K3s / CoreDNS / Envoy
 
-喜欢读一些杂七杂八的书，
-
-但是懒得写读书笔记。
-
-喜欢宅在家看动漫，喜欢撸猫撸狗。
+Jenkins / GitLab / Sonar / MySQL / SQL Server
 
 <hr/>
 
@@ -46,9 +40,7 @@
 可以点击右上角的 :star: 收藏。
 
 <hr/>
-<footer>
-<span><a href="https://github.com/GlacierBo">glacier</a> &copy; 2022.</span>
-<span>Proudly published with <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>
-</footer>
 
+### 友情链接
 
+看看朋友们：[友链](/nav/links.html)

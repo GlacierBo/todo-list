@@ -3,7 +3,6 @@
 技术相关文章，涵盖 Go、Docker、Kubernetes 等内容。
 
 - [Go 学习笔记](./Go学习笔记.md)
-- [GoWeb 学习笔记](./GoWeb学习笔记.md)
 - [Docker 学习笔记](./docker学习笔记.md)
 - [k8s](./k8s.md)
 - [Envoy](./Envoy.md)

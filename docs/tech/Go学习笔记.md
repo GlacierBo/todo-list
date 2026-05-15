@@ -1,3 +1,10 @@
+---
+tags:
+  - Go
+  - 编程
+  - 后端
+---
+
 ### 环境搭建
 
 https://go.dev/learn/

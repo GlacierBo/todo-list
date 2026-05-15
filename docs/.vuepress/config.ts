@@ -7,6 +7,9 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: 'TodoList 文档',
   description: '一个基于 Vue 3 的待办事项列表应用',
+  head: [
+    ['link', { rel: 'icon', href: '/todo-list/favicon.svg' }],
+  ],
   base: process.env.VUEPRESS_BASE || '/todo-list/',
   
   bundler: viteBundler({
@@ -41,25 +44,20 @@ export default defineUserConfig({
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
       { text: 'TodoList', link: '/todolist.html' },
-      { text: '技术', link: '/tech/' },
-      { text: '日志', link: '/journal/' },
-      { text: '读书笔记', link: '/reading/' },
-      { text: '代码片', link: 'https://www.codecopy.cn/user/my' },
-      { text: '导航', link: '/nav/' },
-      {
-        text: '测试导航1',
+      { text: '技术',
         children: [
-          { text: '测试页面A', link: '/test/a.html' },
-          { text: '测试页面B', link: '/test/b.html' },
+          { text: '技术文章', link: '/tech/' },
+          { text: '代码片', link: 'https://www.codecopy.cn/user/my' },
         ],
       },
-      {
-        text: '测试导航2',
+      { text: '日志',
         children: [
-          { text: '子菜单1', link: '/test/sub1/' },
-          { text: '子菜单2', link: '/test/sub2/' },
+          { text: '日志', link: '/journal/' },
+          { text: '读书笔记', link: '/reading/' },
         ],
       },
+      { text: '搞钱计划', link: '/money/' },
+      { text: '关于我', link: '/nav/about.html' },
     ],
     sidebar: {
       '/guide/': [
@@ -92,7 +90,6 @@ export default defineUserConfig({
           text: '技术文章',
           children: [
             { text: 'Go学习笔记', link: '/tech/Go学习笔记.md' },
-            { text: 'GoWeb学习笔记', link: '/tech/GoWeb学习笔记.md' },
             { text: 'Docker学习笔记', link: '/tech/docker学习笔记.md' },
             { text: 'k8s', link: '/tech/k8s.md' },
             { text: 'Envoy', link: '/tech/Envoy.md' },
@@ -109,20 +106,20 @@ export default defineUserConfig({
         {
           text: '年度总结',
           children: [
-            { text: '2022年终总结', link: '/journal/2022/2022年年终总结.md' },
-            { text: '2021年终总结', link: '/journal/2021/2021年终总结.md' },
-            { text: '2020年终总结', link: '/journal/2020/2020年终总结.md' },
-            { text: '比完美更重要的是完成', link: '/journal/2019/比完美更重要的是完成.md' },
-            { text: '毕业一周年', link: '/journal/2018/毕业一周年.md' },
+            { text: '2022，我买了一套房', link: '/journal/2022/2022年年终总结.md' },
+            { text: '2021，瘦了35斤之后，世界不一样了', link: '/journal/2021/2021年终总结.md' },
+            { text: '2020，装修、负债与活着', link: '/journal/2020/2020年终总结.md' },
+            { text: '先完成，再完美', link: '/journal/2019/比完美更重要的是完成.md' },
+            { text: '毕业一周年，我终于跑完了1000公里', link: '/journal/2018/毕业一周年.md' },
           ],
         },
         {
           text: '生活随笔',
           children: [
-            { text: '我又开始写博客了', link: '/journal/2022/我又开始写博客了.md' },
-            { text: '从一张保单说起', link: '/journal/2022/从一张保单说起.md' },
+            { text: '博客六年，内容才是唯一的答案', link: '/journal/2022/我又开始写博客了.md' },
+            { text: '我踩过的保险坑：一份平安意外险的反思', link: '/journal/2022/从一张保单说起.md' },
             { text: '面朝大海，春暖花开', link: '/journal/2020/面朝大海，春暖花开.md' },
-            { text: '讲个年轻时候的故事', link: '/journal/2020/讲个年轻时候的故事.md' },
+            { text: '一个二本学渣的逆袭', link: '/journal/2020/讲个年轻时候的故事.md' },
             { text: '我们期待五颜六色的人生，却不得不向黑白灰的现实低头', link: '/journal/2019/我们期待五颜六色的人生，却不得不向黑白灰的现实低头.md' },
           ],
         },
@@ -146,6 +143,17 @@ export default defineUserConfig({
             { text: 'Docker Nginx配置', link: '/snippets/docker_nginx.md' },
             { text: 'Docsify文档Docker部署', link: '/snippets/docsify文档docker部署.md' },
             { text: 'OpenSSL自签证书', link: '/snippets/openssl自签证书.md' },
+          ],
+        },
+      ],
+      '/money/': [
+        {
+          text: '搞钱计划',
+          children: [
+            { text: '简介', link: '/money/' },
+            { text: '被动收入计划', link: '/money/plan-被动收入.md' },
+            { text: '副业探索', link: '/money/plan-副业探索.md' },
+            { text: '理财配置', link: '/money/plan-理财配置.md' },
           ],
         },
       ],
