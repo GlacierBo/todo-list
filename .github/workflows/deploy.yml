@@ -30,16 +30,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
-        env:
-          VITE_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+      - name: Build VuePress
+        run: npm run docs:build
+
+      - name: Add .nojekyll
+        run: touch docs/.vuepress/dist/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./docs/.vuepress/dist
 
   deploy:
     environment:

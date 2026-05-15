@@ -1,11 +1,35 @@
 import { ref } from 'vue'
-import { supabase } from '@/utils/supabase'
 import type { Todo } from '@/types/todo'
+
+const STORAGE_KEY = 'todos'
 
 export function useTodos() {
   const todos = ref<Todo[]>([])
   const loading = ref(false)
   const error = ref<string | null>(null)
+
+  // 从 LocalStorage 加载数据
+  function loadFromStorage() {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY)
+      if (stored) {
+        todos.value = JSON.parse(stored)
+      }
+    } catch (err) {
+      error.value = 'Failed to load todos from storage'
+      console.error('Error loading todos:', err)
+    }
+  }
+
+  // 保存数据到 LocalStorage
+  function saveToStorage() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(todos.value))
+    } catch (err) {
+      error.value = 'Failed to save todos to storage'
+      console.error('Error saving todos:', err)
+    }
+  }
 
   // 获取所有任务
   async function fetchTodos() {
@@ -13,14 +37,7 @@ export function useTodos() {
     error.value = null
     
     try {
-      const { data, error: fetchError } = await supabase
-        .from('todos')
-        .select('*')
-        .order('created_at', { ascending: false })
-
-      if (fetchError) throw fetchError
-      
-      todos.value = data || []
+      loadFromStorage()
     } catch (err) {
       error.value = err instanceof Error ? err.message : 'Unknown error'
       console.error('Error fetching todos:', err)
@@ -32,16 +49,18 @@ export function useTodos() {
   // 创建新任务
   async function createTodo(todo: Omit<Todo, 'id' | 'created_at' | 'updated_at'>) {
     try {
-      const { data, error: createError } = await supabase
-        .from('todos')
-        .insert([todo])
-        .select()
-        .single()
-
-      if (createError) throw createError
+      const now = new Date().toISOString()
+      const id = Date.now() // 使用时间戳作为 ID
+      const newTodo: Todo = {
+        ...todo,
+        id,
+        created_at: now,
+        updated_at: now
+      }
       
-      todos.value.unshift(data)
-      return data
+      todos.value.unshift(newTodo)
+      saveToStorage()
+      return newTodo
     } catch (err) {
       error.value = err instanceof Error ? err.message : 'Failed to create todo'
       console.error('Error creating todo:', err)
@@ -52,21 +71,20 @@ export function useTodos() {
   // 更新任务
   async function updateTodo(id: number, updates: Partial<Todo>) {
     try {
-      const { data, error: updateError } = await supabase
-        .from('todos')
-        .update(updates)
-        .eq('id', id)
-        .select()
-        .single()
-
-      if (updateError) throw updateError
-      
       const index = todos.value.findIndex(t => t.id === id)
-      if (index !== -1) {
-        todos.value[index] = data
+      if (index === -1) {
+        throw new Error('Todo not found')
       }
       
-      return data
+      const updatedTodo = {
+        ...todos.value[index],
+        ...updates,
+        updated_at: new Date().toISOString()
+      }
+      
+      todos.value[index] = updatedTodo
+      saveToStorage()
+      return updatedTodo
     } catch (err) {
       error.value = err instanceof Error ? err.message : 'Failed to update todo'
       console.error('Error updating todo:', err)
@@ -77,14 +95,8 @@ export function useTodos() {
   // 删除任务
   async function deleteTodo(id: number) {
     try {
-      const { error: deleteError } = await supabase
-        .from('todos')
-        .delete()
-        .eq('id', id)
-
-      if (deleteError) throw deleteError
-      
       todos.value = todos.value.filter(t => t.id !== id)
+      saveToStorage()
     } catch (err) {
       error.value = err instanceof Error ? err.message : 'Failed to delete todo'
       console.error('Error deleting todo:', err)
@@ -97,22 +109,6 @@ export function useTodos() {
     return updateTodo(id, { completed })
   }
 
-  // 实时订阅
-  function subscribeToTodos(callback: () => void) {
-    const subscription = supabase
-      .channel('todos_channel')
-      .on(
-        'postgres_changes',
-        { event: '*', schema: 'public', table: 'todos' },
-        () => {
-          callback()
-        }
-      )
-      .subscribe()
-
-    return subscription
-  }
-
   return {
     todos,
     loading,
@@ -121,7 +117,6 @@ export function useTodos() {
     createTodo,
     updateTodo,
     deleteTodo,
-    toggleTodo,
-    subscribeToTodos
+    toggleTodo
   }
 }

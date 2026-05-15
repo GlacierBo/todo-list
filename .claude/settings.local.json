@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git mv *)",
+      "Bash(mv app/ src/)",
+      "Bash(git add *)",
+      "Bash(git rm *)",
+      "Bash(grep *)",
+      "Bash(mkdir -p docs/image)",
+      "Bash(cp docs/技术/image/* docs/image/)",
+      "Bash(cp docs/日志/image/*.JPG docs/image/)",
+      "Bash(node scripts/fix-image-paths.cjs)",
+      "Bash(node -e ' *)",
+      "Bash(cmd //c \"move 日志 journal\")",
+      "Bash(cmd //c \"move 读书笔记 reading\")",
+      "Bash(cmd //c \"move 代码片 snippets\")",
+      "Bash(cmd //c \"move 导航 nav\")",
+      "Bash(npm run *)",
+      "WebFetch(domain:localhost)",
+      "Bash(curl *)",
+      "Bash(netstat -ano)",
+      "Bash(kill -9 23652 28604 17336 13860)",
+      "Bash(cmd *)"
+    ]
+  }
+}

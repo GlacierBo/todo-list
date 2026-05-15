@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useTodos } from '@/composables/useTodos'
 import type { Todo } from '@/types/todo'
 import ConfirmDialog from '@/components/ConfirmDialog.vue'
-import { supabase } from '@/utils/supabase'
 
-const { todos, loading, error, fetchTodos, createTodo, deleteTodo, toggleTodo, subscribeToTodos } = useTodos()
+const { todos, loading, error, fetchTodos, createTodo, deleteTodo, toggleTodo } = useTodos()
 
 const newTodoTitle = ref('')
 const newTodoPriority = ref(1) // 默认优先级：1=低
-const subscription = ref<any>(null)
 const showDeleteDialog = ref(false)
 const todoToDelete = ref<number | null>(null)
 
@@ -80,18 +78,6 @@ function getPriorityColor(priority: number): string {
 
 onMounted(() => {
   fetchTodos()
-  
-  // 设置实时订阅
-  subscription.value = subscribeToTodos(() => {
-    fetchTodos()
-  })
-})
-
-onUnmounted(() => {
-  // 清理订阅
-  if (subscription.value) {
-    supabase.removeChannel(subscription.value)
-  }
 })
 </script>
 
