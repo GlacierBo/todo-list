@@ -7,7 +7,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: 'TodoList 文档',
   description: '一个基于 Vue 3 的待办事项列表应用',
-  base: '/todo-list/',
+  base: process.env.VUEPRESS_BASE || '/todo-list/',
   
   bundler: viteBundler({
     viteOptions: {
@@ -44,7 +44,7 @@ export default defineUserConfig({
       { text: '技术', link: '/tech/' },
       { text: '日志', link: '/journal/' },
       { text: '读书笔记', link: '/reading/' },
-      { text: '代码片', link: '/snippets/' },
+      { text: '代码片', link: 'https://www.codecopy.cn/user/my' },
       { text: '导航', link: '/nav/' },
     ],
     sidebar: {
