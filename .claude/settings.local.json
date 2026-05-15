@@ -27,7 +27,8 @@
       "Bash(npm install *)",
       "Bash(node scripts/compress-images.cjs)",
       "Bash(npx vue-tsc *)",
-      "Bash(VUEPRESS_BASE=/ npm run docs:build)"
+      "Bash(VUEPRESS_BASE=/ npm run docs:build)",
+      "Bash(npx vuepress *)"
     ]
   }
 }

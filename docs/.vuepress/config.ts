@@ -46,6 +46,20 @@ export default defineUserConfig({
       { text: '读书笔记', link: '/reading/' },
       { text: '代码片', link: 'https://www.codecopy.cn/user/my' },
       { text: '导航', link: '/nav/' },
+      {
+        text: '测试导航1',
+        children: [
+          { text: '测试页面A', link: '/test/a.html' },
+          { text: '测试页面B', link: '/test/b.html' },
+        ],
+      },
+      {
+        text: '测试导航2',
+        children: [
+          { text: '子菜单1', link: '/test/sub1/' },
+          { text: '子菜单2', link: '/test/sub2/' },
+        ],
+      },
     ],
     sidebar: {
       '/guide/': [
@@ -55,6 +69,21 @@ export default defineUserConfig({
             { text: '介绍', link: '/guide/introduction.md' },
             { text: '快速开始', link: '/guide/getting-started.md' },
             { text: '功能特性', link: '/guide/features.md' },
+          ],
+        },
+        {
+          text: '高级指南',
+          link: '/guide/advanced/',
+          children: [
+            { text: '部署指南', link: '/guide/advanced/deploy.md' },
+            { text: '性能优化', link: '/guide/advanced/performance.md' },
+          ],
+        },
+        {
+          text: '示例',
+          link: '/guide/examples/',
+          children: [
+            { text: '基础使用', link: '/guide/examples/basic-usage.md' },
           ],
         },
       ],

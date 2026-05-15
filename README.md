@@ -126,10 +126,6 @@ npm run lint
 
 MIT License - 详见 [LICENSE](./LICENSE) 文件
 
-## 👤 作者
-
-傅皮蛋儿
-
 ---
 
 **注意**: 本项目使用 LocalStorage 存储 TodoList 数据，数据仅保存在当前浏览器中，不同浏览器之间数据不共享。
