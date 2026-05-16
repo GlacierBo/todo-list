@@ -43,4 +43,4 @@ https://hmcl.huangyuhui.net/download
 
 我玩的版本是`1.18.1`，多人游戏里面选择服务器，填入我们的服务器链接就可以加入游戏了
 
-![image-20230309174739308](../image/image-20230309174739308.png)
+![image-20230309174739308](https://img.fpdan.asia/PicGo/image-20230309174739308.png)

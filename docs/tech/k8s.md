@@ -74,17 +74,17 @@ Google 10年容器化基础架构，起源于 borg 的设计思路。
 
 borg 架构图
 
-![image-20230210164124970](../image/image-20230210164124970.png)
+![image-20230210164124970](https://img.fpdan.asia/PicGo/image-20230210164124970.webp)
 
 k8s 架构图
 
-![image-20230210164321613](../image/image-20230210164321613.png)
+![image-20230210164321613](https://img.fpdan.asia/PicGo/image-20230210164321613.webp)
 
 
 
 #### etcd
 
-![image-20230210164642858](../image/image-20230210164642858.png)
+![image-20230210164642858](https://img.fpdan.asia/PicGo/image-20230210164642858.webp)
 
 
 

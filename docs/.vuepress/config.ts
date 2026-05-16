@@ -5,36 +5,16 @@ import { path } from 'vuepress/utils'
 
 export default defineUserConfig({
   lang: 'zh-CN',
-  title: 'TodoList 文档',
-  description: '一个基于 Vue 3 的待办事项列表应用',
+  title: '文档站点',
+  description: '个人文档站点',
   head: [
-    ['link', { rel: 'icon', href: '/todo-list/favicon.svg' }],
+    ['link', { rel: 'icon', href: '/favicon.svg' }],
   ],
-  base: process.env.VUEPRESS_BASE || '/todo-list/',
+  base: process.env.VUEPRESS_BASE || '/',
   
   bundler: viteBundler({
     viteOptions: {
-      resolve: {
-        alias: {
-          '@': path.resolve(__dirname, '../../src')
-        }
-      },
       server: {},
-      plugins: [
-        {
-          name: 'redirect-base',
-          configureServer(server) {
-            server.middlewares.use((req, res, next) => {
-              if (req.url === '/todo-list' || req.url === '/todo-list?') {
-                res.writeHead(302, { Location: '/todo-list/' })
-                res.end()
-                return
-              }
-              next()
-            })
-          }
-        }
-      ]
     }
   }),
   
@@ -43,7 +23,6 @@ export default defineUserConfig({
     navbar: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
-      { text: 'TodoList', link: '/todolist.html' },
       { text: '技术',
         children: [
           { text: '技术文章', link: '/tech/' },
@@ -67,6 +46,12 @@ export default defineUserConfig({
             { text: '介绍', link: '/guide/introduction.md' },
             { text: '快速开始', link: '/guide/getting-started.md' },
             { text: '功能特性', link: '/guide/features.md' },
+          ],
+        },
+        {
+          text: '归档项目',
+          children: [
+            { text: 'TodoList 应用', link: '/guide/archive/todolist-archive.md' },
           ],
         },
         {

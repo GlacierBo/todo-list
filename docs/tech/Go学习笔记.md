@@ -9,11 +9,11 @@ tags:
 
 https://go.dev/learn/
 
-![image-20230207165828219](../image/image-20230207165828219.png)
+![image-20230207165828219](https://img.fpdan.asia/PicGo/image-20230207165828219.png)
 
-![image-20230207170409978](../image/image-20230207170409978.png)
+![image-20230207170409978](https://img.fpdan.asia/PicGo/image-20230207170409978.png)
 
-![image-20230207170700878](../image/image-20230207170700878.png)
+![image-20230207170700878](https://img.fpdan.asia/PicGo/image-20230207170700878.png)
 
 
 
@@ -28,7 +28,7 @@ func main() {
 }
 ```
 
-![image-20230207171854350](../image/image-20230207171854350.png)
+![image-20230207171854350](https://img.fpdan.asia/PicGo/image-20230207171854350.png)
 
 
 

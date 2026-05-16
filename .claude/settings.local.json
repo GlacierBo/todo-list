@@ -28,7 +28,20 @@
       "Bash(node scripts/compress-images.cjs)",
       "Bash(npx vue-tsc *)",
       "Bash(VUEPRESS_BASE=/ npm run docs:build)",
-      "Bash(npx vuepress *)"
+      "Bash(npx vuepress *)",
+      "Bash(awk '{print $5, $NF}')",
+      "Bash(node *)",
+      "Bash(python *)",
+      "Bash(sed -i 's|../../external/3cdd8f8f2340fc0821a988db95eaa17-1c37d55c.jpg|../../external/3cdd8f8f2340fc0821a988db95eaa17-1c37d55c.webp|g' \"docs/journal/2021/2021年终总结.md\")",
+      "Bash(sed -i 's|../../external/f1a5a03b26fb0b090c7e03eec9edcff-78a6baed.jpg|../../external/f1a5a03b26fb0b090c7e03eec9edcff-78a6baed.webp|g' \"docs/journal/2021/2021年终总结.md\")",
+      "Bash(sed -i 's|../../external/a786bc301b8683706a92ad8614c5edf-430ecbc3.jpg|../../external/a786bc301b8683706a92ad8614c5edf-430ecbc3.webp|g' \"docs/journal/2021/2021年终总结.md\")",
+      "Bash(sed -i 's|../../external/4153a72e39a7bc8f7a28343bd065d85-ba845e49.jpg|../../external/4153a72e39a7bc8f7a28343bd065d85-ba845e49.webp|g' \"docs/journal/2021/2021年终总结.md\")",
+      "Bash(sed -i 's|../../external/a9342ed5b4c1085bd97bcba00d9c35a-9739667e.jpg|../../external/a9342ed5b4c1085bd97bcba00d9c35a-9739667e.webp|g' \"docs/journal/2021/2021年终总结.md\")",
+      "Bash(read f *)",
+      "Bash([ -f \"docs/$f\" ])",
+      "Bash(sed -i 's|]\\(../../external/|]\\(https://img.fpdan.asia/PicGo/|g' docs/journal/*/*.md docs/journal/*/*/*.md)",
+      "Bash(sed -i 's|]\\(../external/|]\\(https://img.fpdan.asia/PicGo/|g' docs/reading/*.md)",
+      "Bash(sed -i 's|]\\(../external/|]\\(https://img.fpdan.asia/PicGo/|g' docs/tech/*.md)"
     ]
   }
 }

@@ -105,7 +105,7 @@ helm install rancher rancher-latest/rancher \
 
 集群管理 - 导入已有集群 - 通用 - 输入集群名称 - 创建
 
-![image-20230216180329547](../image/image-20230216180329547.png)
+![image-20230216180329547](https://img.fpdan.asia/PicGo/image-20230216180329547.png)
 
 不使用证书，添加集群，添加集群之前同样需要添加 host 文件，让加入集群的这台服务器能认识 `rancher.copark.com` 这个URL。
 

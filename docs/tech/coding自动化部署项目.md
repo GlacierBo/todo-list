@@ -50,7 +50,7 @@ cnpm i docsify-cli -g
 docsify init ./doc
 ```
 
-![image-20230301130820340](../image/image-20230301130820340.png)
+![image-20230301130820340](https://img.fpdan.asia/PicGo/image-20230301130820340.png)
 
 
 
@@ -60,7 +60,7 @@ docsify init ./doc
 docsify serve doc
 ```
 
-![image-20230301131231996](../image/image-20230301131231996.png)
+![image-20230301131231996](https://img.fpdan.asia/PicGo/image-20230301131231996.webp)
 
 查看生成的文件，如图有3个
 
@@ -72,7 +72,7 @@ REAME.md 这个首页内容
 
 
 
-![image-20230301130834166](../image/image-20230301130834166.png)
+![image-20230301130834166](https://img.fpdan.asia/PicGo/image-20230301130834166.png)
 
 > 我们甚至可以用 Python 去运行他
 
@@ -94,9 +94,9 @@ python -m http.server 3000
 
 填充内容后，启动双击`bat`脚本，在本地查看效果
 
-![image-20230301111639050](../image/image-20230301111639050.png)
+![image-20230301111639050](https://img.fpdan.asia/PicGo/image-20230301111639050.png)
 
-![image-20230301132219045](../image/image-20230301132219045.png)
+![image-20230301132219045](https://img.fpdan.asia/PicGo/image-20230301132219045.png)
 
 ### 2. 添加 Dockerfile
 
@@ -118,11 +118,11 @@ https://git-scm.com/
 
 https://coding.net/
 
-![image-20230301132931476](../image/image-20230301132931476.png)
+![image-20230301132931476](https://img.fpdan.asia/PicGo/image-20230301132931476.png)
 
 选择`持续集成`开始编写构建计划
 
-![image-20230301133050561](../image/image-20230301133050561.png)
+![image-20230301133050561](https://img.fpdan.asia/PicGo/image-20230301133050561.png)
 
 ####  构建的思路
 
@@ -142,11 +142,11 @@ https://coding.net/
 ssh-keygen -m PEM -t rsa -f coding -C "pishi@gmail.com"
 ```
 
-![image-20230301135137299](../image/image-20230301135137299.png)
+![image-20230301135137299](https://img.fpdan.asia/PicGo/image-20230301135137299.png)
 
 将私钥`coding`录入到ssh私钥中
 
-![image-20230301135325536](../image/image-20230301135325536.png)
+![image-20230301135325536](https://img.fpdan.asia/PicGo/image-20230301135325536.png)
 
 公钥`coding.pub`内容复制，放入被访问服务器`~/.ssh/authorized_keys` 文件中。
 
@@ -156,9 +156,9 @@ ssh-keygen -m PEM -t rsa -f coding -C "pishi@gmail.com"
 
 选择这个前端模板稍作修改
 
-![image-20230301133652528](../image/image-20230301133652528.png)
+![image-20230301133652528](https://img.fpdan.asia/PicGo/image-20230301133652528.png)
 
-![image-20230301133829014](../image/image-20230301133829014.png)
+![image-20230301133829014](https://img.fpdan.asia/PicGo/image-20230301133829014.png)
 
 
 
@@ -166,7 +166,7 @@ ssh-keygen -m PEM -t rsa -f coding -C "pishi@gmail.com"
 
 选择制品库的时候没有就去创建一下。
 
-![image-20230301134240346](../image/image-20230301134240346.png)
+![image-20230301134240346](https://img.fpdan.asia/PicGo/image-20230301134240346.png)
 
 录入凭据，保存。
 
@@ -278,11 +278,11 @@ pipeline {
 
 将这篇推送到`coding.net`，看到`coding`已经在自动构建了
 
-![image-20230301141017451](../image/image-20230301141017451.png)
+![image-20230301141017451](https://img.fpdan.asia/PicGo/image-20230301141017451.png)
 
 镜像文件打包已经传到我服务器上了
 
-![image-20230301141206814](../image/image-20230301141206814.png)
+![image-20230301141206814](https://img.fpdan.asia/PicGo/image-20230301141206814.png)
 
 
 
@@ -298,7 +298,7 @@ pipeline {
 
 1.  coding 每个月提供免费的 300min 构建时间，不用白不用
 
-![image-20230301141646623](../image/image-20230301141646623.png)
+![image-20230301141646623](https://img.fpdan.asia/PicGo/image-20230301141646623.png)
 
 2. [【活动】送服务器啦！蓝易云征文大赛](https://fishpi.cn/article/1677580643943)
 

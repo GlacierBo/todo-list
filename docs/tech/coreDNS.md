@@ -58,7 +58,7 @@ root@cowain-05:/etc/coredns# ln -sf /run/systemd/resolve/resolv.conf /etc/resolv
 
 
 
-![image-20230216135258011](../image/image-20230216135258011.png)
+![image-20230216135258011](https://img.fpdan.asia/PicGo/image-20230216135258011.png)
 
 
 
@@ -88,7 +88,7 @@ ping rancher.copark.com
 nslookup rancher.copark.com
 ```
 
-![image-20230217094636840](../image/image-20230217094636840.png)
+![image-20230217094636840](https://img.fpdan.asia/PicGo/image-20230217094636840.png)
 
 
 

@@ -6,31 +6,27 @@ actions:
   - text: 快速开始
     link: /guide/getting-started.html
     type: primary
-  - text: 查看演示
-    link: /demo/
-    type: secondary
 features:
-  - title: 简洁易用
-    details: 直观的界面设计，轻松管理你的待办事项
-  - title: 优先级管理
-    details: 支持低、中、高三种优先级，帮助你更好地安排任务
-  - title: 本地存储
-    details: 数据保存在浏览器本地，无需后端服务
-  - title: Vue 3 驱动
-    details: 基于 Vue 3 + TypeScript 构建，现代化技术栈
-footer: MIT Licensed | Copyright © 2026 TodoList
+  - title: 技术文章
+    details: 记录各种技术相关的学习笔记和实践经验
+  - title: 生活日志
+    details: 分享个人生活感悟、年度总结等内容
+  - title: 读书笔记
+    details: 整理阅读书籍的心得体会
+  - title: 代码片段
+    details: 收集常用的代码片段和配置备忘
+footer: MIT Licensed | Copyright © 2026
 ---
 
 # 欢迎📝
 
-这是一个简单而强大的待办事项列表应用，帮助你高效管理日常任务。
+这是一个个人文档站点，用于记录技术文章、生活日志、读书笔记等内容。
 
-## 主要特性
+## 主要内容
 
-- ✅ 添加、编辑、删除任务
-- 🎯 任务优先级管理（低/中/高）
-- 💾 本地数据存储
-- 🎨 简洁美观的界面
-- ⚡ 快速响应
+- 📚 技术文章 - Go、Docker、K8s 等技术学习
+- 📔 生活日志 - 年度总结和生活随笔
+- 📖 读书笔记 - 阅读心得体会
+- 💻 代码片段 - 常用配置和命令备忘
 
 

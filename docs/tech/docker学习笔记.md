@@ -70,7 +70,7 @@ rm -rf /var/lib/docker
 
 #### 容器镜像加速
 
-![image-20230116155526668](../image/image-20230116155526668.png)
+![image-20230116155526668](https://img.fpdan.asia/PicGo/image-20230116155526668.png)
 
 
 
@@ -525,7 +525,7 @@ admin  aol2  k3s  k8s  lighthouse  staragent  test.java  www
 
 #### 小结
 
-![image-20230116172158669](../image/image-20230116172158669.png)
+![image-20230116172158669](https://img.fpdan.asia/PicGo/image-20230116172158669.webp)
 
 
 
@@ -623,7 +623,7 @@ docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=
 docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e ES_JAVA_OPTS="-Xms64m --Xms512m" elasticsearch:7.6.2
 ```
 
-![image-20230117091523135](../image/image-20230117091523135.png)
+![image-20230117091523135](https://img.fpdan.asia/PicGo/image-20230117091523135.png)
 
 
 
@@ -652,7 +652,7 @@ docker commit 提交容器称为一个新的副本
 docker commit -m="提交的描述信息" -a="作者" 容器id 目标镜像名:[TAG]
 ```
 
-![image-20230117100747039](../image/image-20230117100747039.png)
+![image-20230117100747039](https://img.fpdan.asia/PicGo/image-20230117100747039.png)
 
 
 
@@ -685,11 +685,11 @@ docker run -it -v /home/ceshi:/home centos /bin/bash
 
 
 
-![image-20230117104916931](../image/image-20230117104916931.png)
+![image-20230117104916931](https://img.fpdan.asia/PicGo/image-20230117104916931.png)
 
-![image-20230117105202751](../image/image-20230117105202751.png)
+![image-20230117105202751](https://img.fpdan.asia/PicGo/image-20230117105202751.png)
 
-![image-20230117105210828](../image/image-20230117105210828.png)
+![image-20230117105210828](https://img.fpdan.asia/PicGo/image-20230117105210828.png)
 
 
 
@@ -748,7 +748,7 @@ docker run -d -p --name nginx02 -v juming-nginx:/etc/nginx:rw nginx
 
 #### 数据卷容器
 
-![image-20230127221458935](../image/image-20230127221458935.png)
+![image-20230127221458935](https://img.fpdan.asia/PicGo/image-20230127221458935.webp)
 
 多个容器实现数据共享
 
@@ -815,13 +815,13 @@ Successfully tagged kuangshen/centos:1.0
 
 
 
-![image-20230129085544021](../image/image-20230129085544021.png)
+![image-20230129085544021](https://img.fpdan.asia/PicGo/image-20230129085544021.webp)
 
 dockerfile 是面向开发的，我们以后要发布项目，做镜像就要编写dockerfile。
 
 #### dockerfile 指令
 
-![image-20230129090008935](../image/image-20230129090008935.png)
+![image-20230129090008935](https://img.fpdan.asia/PicGo/image-20230129090008935.webp)
 
 
 
@@ -915,11 +915,11 @@ lost+found
 
 ENTRYPOINT 
 
-![image-20230129111304599](../image/image-20230129111304599.png)
+![image-20230129111304599](https://img.fpdan.asia/PicGo/image-20230129111304599.png)
 
 CMD
 
-![image-20230129111345405](../image/image-20230129111345405.png)
+![image-20230129111345405](https://img.fpdan.asia/PicGo/image-20230129111345405.png)
 
 dockerfile 中很多命令都十分的相似，我们需要了解他们的区别
 
@@ -927,7 +927,7 @@ dockerfile 中很多命令都十分的相似，我们需要了解他们的区别
 
 1. 准备tomcat压缩包、jdk压缩包
 
-![image-20230129112028562](../image/image-20230129112028562.png)
+![image-20230129112028562](https://img.fpdan.asia/PicGo/image-20230129112028562.png)
 
 2. 编写dockerfile文件，官方命名`Dockerfile`，build会自动寻找这个文件，就不需要`-f`指定了。
 
@@ -1003,7 +1003,7 @@ CMD /usr/local/apache-tomcat-9.0.71/bin/startup.sh && tail -F /usr/local/apache-
 
 项目部署成功，可以直接访问
 
-![image-20230130092136513](../image/image-20230130092136513.png)
+![image-20230130092136513](https://img.fpdan.asia/PicGo/image-20230130092136513.png)
 
 #### 发布自己的镜像
 
@@ -1045,7 +1045,7 @@ Options:
 
 #### 理解 Docker0
 
-![image-20230130101848857](../image/image-20230130101848857.png)
+![image-20230130101848857](https://img.fpdan.asia/PicGo/image-20230130101848857.png)
 
 linux 可以ping通 容器内部
 
@@ -1063,7 +1063,7 @@ linux 可以ping通 容器内部
 # 容器和容器之间是互通的
 ```
 
-![image-20230130104442630](../image/image-20230130104442630.png)
+![image-20230130104442630](https://img.fpdan.asia/PicGo/image-20230130104442630.webp)
 
 结论： tomcat01 和 tomcat02 是公用的路由器，docker0.
 
@@ -1073,7 +1073,7 @@ linux 可以ping通 容器内部
 
 Docker 使用的是Linux的桥接，宿主机中是一个Docker容器的网桥 docker0
 
-![image-20230130105802085](../image/image-20230130105802085.png)
+![image-20230130105802085](https://img.fpdan.asia/PicGo/image-20230130105802085.webp)
 
 Docker 中所有的网络接口都是虚拟的。虚拟的转发效率高。（内网）
 
@@ -1083,7 +1083,7 @@ Docker 中所有的网络接口都是虚拟的。虚拟的转发效率高。（�
 docker inspect 容器ID
 ```
 
-![image-20230207102958575](../image/image-20230207102958575.png)
+![image-20230207102958575](https://img.fpdan.asia/PicGo/image-20230207102958575.webp)
 
 #### -- link
 
@@ -1093,11 +1093,11 @@ docker inspect 容器ID
 
 ```
 
-![image-20230207103312810](../image/image-20230207103312810.png)
+![image-20230207103312810](https://img.fpdan.asia/PicGo/image-20230207103312810.webp)
 
 --link 就是在 hosts 配置中增加了一个 172.18.0.3 tomcat02 的配置
 
-![image-20230207103337380](../image/image-20230207103337380.png)
+![image-20230207103337380](https://img.fpdan.asia/PicGo/image-20230207103337380.webp)
 
 我们现在用Docker 已经不建议使用 --link了！
 
@@ -1107,7 +1107,7 @@ docker0问题：不支持容器名链接访问！
 
 >  查看所有的docker网络
 
-![image-20230207105736523](../image/image-20230207105736523.png)
+![image-20230207105736523](https://img.fpdan.asia/PicGo/image-20230207105736523.png)
 
 
 
@@ -1183,9 +1183,9 @@ ea763009c679   bridge           bridge    local
 
 
 
-![image-20230207112117819](../image/image-20230207112117819.png)
+![image-20230207112117819](https://img.fpdan.asia/PicGo/image-20230207112117819.png)
 
-![image-20230207112450953](../image/image-20230207112450953.png)
+![image-20230207112450953](https://img.fpdan.asia/PicGo/image-20230207112450953.webp)
 
 好处：
 
@@ -1195,9 +1195,9 @@ redis - 不同的集群使用不同网络，保证集群是安全和健康的
 
 #### 网络连通
 
-![image-20230207112839436](../image/image-20230207112839436.png)
+![image-20230207112839436](https://img.fpdan.asia/PicGo/image-20230207112839436.png)
 
-![image-20230207112942351](../image/image-20230207112942351.png)
+![image-20230207112942351](https://img.fpdan.asia/PicGo/image-20230207112942351.png)
 
 
 
@@ -1210,9 +1210,9 @@ redis - 不同的集群使用不同网络，保证集群是安全和健康的
 # 一个容器两个ip地址
 ```
 
-![image-20230207132103964](../image/image-20230207132103964.png)
+![image-20230207132103964](https://img.fpdan.asia/PicGo/image-20230207132103964.png)
 
-![image-20230207132302243](../image/image-20230207132302243.png)
+![image-20230207132302243](https://img.fpdan.asia/PicGo/image-20230207132302243.webp)
 
 结论：假设要跨网络操作别人，就需要使用 `docker network connect` 连通
 
@@ -1220,7 +1220,7 @@ redis - 不同的集群使用不同网络，保证集群是安全和健康的
 
 **分片 + 高可用 + 负载集群**
 
-![image-20230207132617236](../image/image-20230207132617236.png)
+![image-20230207132617236](https://img.fpdan.asia/PicGo/image-20230207132617236.webp)
 
 
 
@@ -1323,7 +1323,7 @@ docker run -p 6376:6379 -p 16376:16379 \
 > --cluster-replicas 1
 ```
 
-![image-20230207140902761](../image/image-20230207140902761.png)
+![image-20230207140902761](https://img.fpdan.asia/PicGo/image-20230207140902761.png)
 
 ```shell
 /data # redis-cli -c
@@ -1346,15 +1346,15 @@ cluster_stats_messages_meet_received:5
 cluster_stats_messages_received:209
 ```
 
-![image-20230207140950586](../image/image-20230207140950586.png)
+![image-20230207140950586](https://img.fpdan.asia/PicGo/image-20230207140950586.png)
 
 
 
 把13停掉，看看数据还在不在，看到14已经成为master了，数据也可以get到。
 
-![image-20230207141048567](../image/image-20230207141048567.png)
+![image-20230207141048567](https://img.fpdan.asia/PicGo/image-20230207141048567.png)
 
-![image-20230207141306833](../image/image-20230207141306833.png)
+![image-20230207141306833](https://img.fpdan.asia/PicGo/image-20230207141306833.png)
 
 
 

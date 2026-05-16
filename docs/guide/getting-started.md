@@ -21,7 +21,7 @@ npm install
 npm run docs:dev
 ```
 
-访问 `http://localhost:8080` 查看文档和演示。
+访问 `http://localhost:8080` 查看文档。
 
 ## 构建
 

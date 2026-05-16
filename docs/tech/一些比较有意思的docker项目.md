@@ -30,7 +30,7 @@ https://www.bilibili.com/video/BV1og4y1q7M4/?spm_id_from=333.999.0.0
 
 可以申请`ssl`证书，很方便的配置反向代理
 
-![image-20230308155119974](../image/image-20230308155119974.png)
+![image-20230308155119974](https://img.fpdan.asia/PicGo/image-20230308155119974.png)
 
 
 
@@ -83,15 +83,15 @@ portainer/portainer
 
 NPM 配置一下，域名和代理，顺便申请个SSL证书。
 
-![image-20230308162604175](../image/image-20230308162604175.png)
+![image-20230308162604175](https://img.fpdan.asia/PicGo/image-20230308162604175.png)
 
-![image-20230308162732291](../image/image-20230308162732291.png)
+![image-20230308162732291](https://img.fpdan.asia/PicGo/image-20230308162732291.png)
 
 `portainer` 就是简单的看一下你容器的状态，对于集聪明才智于一身、精通docker命令的你其实没什么卵用。
 
 至少不用 `docker logs xx` 查看容器日志。
 
-![image-20230308163314919](../image/image-20230308163314919.png)
+![image-20230308163314919](https://img.fpdan.asia/PicGo/image-20230308163314919.png)
 
 哦，你们用的是`ELK`，那没事了。
 
@@ -115,7 +115,7 @@ docker run -d --name bitwardenrs \
 
 我感觉用处不大。
 
-![image-20230308164554185](../image/image-20230308164554185.png)
+![image-20230308164554185](https://img.fpdan.asia/PicGo/image-20230308164554185.webp)
 
 只是看到谷歌提示我密码泄露让我有点焦虑。。。
 
@@ -143,7 +143,7 @@ docker run -dit \
 
 一个月一包烟钱。
 
-![image-20230308163636891](../image/image-20230308163636891.png)
+![image-20230308163636891](https://img.fpdan.asia/PicGo/image-20230308163636891.png)
 
 参考资料：
 
